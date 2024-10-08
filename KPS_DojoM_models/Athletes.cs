@@ -13,6 +13,7 @@
         public int AthleteCcNumber { get; set; }
         public string Club { get; set; }
         public int AthleteClubMemberNumber { get; set; }
+        public int AssociationMemberNumber { get; set; }
         public int CategoryId { get; set; }
         public int AssociationId { get; set; }
         public int ParentId { get; set; }
