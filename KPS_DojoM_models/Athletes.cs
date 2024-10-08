@@ -17,6 +17,6 @@
         public int CategoryId { get; set; }
         public int AssociationId { get; set; }
         public int ParentId { get; set; }
-
+       
     }
 }
