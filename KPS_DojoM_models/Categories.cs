@@ -8,10 +8,10 @@ namespace KPS_DojoM_models
 {
     internal class Categories
     {
-        public int CategoryId { get; set; }
-        public string CategoryName { get; set; }
-        public virtual List<Athletes> Athlete { get; set; }
-        //public int ResultId { get; set; }
-        public virtual List<Events> Event { get; set; }
+        public int? CategoryId { get; set; }
+        public string? CategoryName { get; set; }
+        public virtual List<Athletes>? Athlete { get; set; }
+       
+        public virtual List<Events>? Event { get; set; }
     }
 }

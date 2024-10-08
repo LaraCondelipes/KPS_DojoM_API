@@ -8,7 +8,7 @@ namespace KPS_DojoM_models
 {
     internal class Events
     {
-        public int EventId { get; set; }
-        public string EventName { get; set; }
+        public int? EventId { get; set; }
+        public string? EventName { get; set; }
     }
 }
