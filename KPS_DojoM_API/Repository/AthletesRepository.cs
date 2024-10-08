@@ -46,13 +46,15 @@ namespace KPS_DojoM_API.Repository
 
         public void Delete(int id)
         {
-            var value = Get(id);
+            var entity = Get(id);
 
-            if (value != null)
+            if (entity != null)
             { 
-                context.Athletes.Remove(value);
-                context.SaveChanges();  
+                context.Athletes.Remove(entity);
+                context.SaveChanges();
             }
         }
+
+        
     }
 }

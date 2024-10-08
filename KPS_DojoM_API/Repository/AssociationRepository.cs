@@ -29,32 +29,30 @@ namespace KPS_DojoM_API.Repository
                 .Include(b => b.Athlete)
                 .FirstOrDefault(b => b.Id == id);
         }
-        public Association Add(Association value)
+        public Association Add(Association entity)
         {
-            context.Association.Add(value);
+            context.Association.Add(entity);
             context.SaveChanges();
 
-            return value;
+            return entity;
         }
 
-        public void Update(Association value)
+        public void Update(Association entity)
         { 
-            context.Entry(value).State = EntityState.Modified;
+            context.Entry(entity).State = EntityState.Modified;
             context.SaveChanges();
         }
         public void Delete(int id)
         { 
-        var value = Get(id);
-            if (value != null)
+        var entity = Get(id);
+
+            if (entity != null)
             { 
-                context.Association.Remove(value);
+                context.Association.Remove(entity);
                 context.SaveChanges();
             }
         }
 
-        public Association? GetValue(int id)
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }
