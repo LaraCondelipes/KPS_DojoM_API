@@ -2,7 +2,7 @@
 {
     public class Athletes
     {
-        public int? AthleteId { get; set; }
+        public int? Id { get; set; }
         public int? AthleteKYU { get; set; }
         public string? AthleteName { get; set; }
         public DateTime? AthleteBirthdayDate { get; set; } 
@@ -15,8 +15,15 @@
         public int? AthleteClubMemberNumber { get; set; }
         public int? AssociationMemberNumber { get; set; }
         public int? CategoryId { get; set; }
+        public virtual Categories? Categories { get; set; }
         public int? AssociationId { get; set; }
+        public virtual Association? Association { get; set; }
         public int? ParentId { get; set; }
-       
+        public virtual Parents? Parents { get; set; }
+
+        public object HasNoKey()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace KPS_DojoM_models
 {
    public class Parents
     {
-        public int? ParentId { get; set; }
+        public int? Id { get; set; }
         public string? ParentName { get; set; }
         public string? ParentAddress { get; set; }
         public int? ParentCellPhone { get; set; }

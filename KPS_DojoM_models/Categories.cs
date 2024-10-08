@@ -8,7 +8,7 @@ namespace KPS_DojoM_models
 {
     public class Categories
     {
-        public int? CategoryId { get; set; }
+        public int Id { get; set; }
         public string? CategoryName { get; set; }
         public virtual List<Athletes>? Athlete { get; set; }
         public virtual List<Events>? Event { get; set; }

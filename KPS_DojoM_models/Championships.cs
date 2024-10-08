@@ -8,7 +8,7 @@ namespace KPS_DojoM_models
 {
     public class Championships
     {
-        public int? ChampionshipId { get; set; }
+        public int? Id { get; set; }
         public int? ChampionshipName { get; set; }
         public int? AssociationId { get; set; }
         public virtual List<TheResults>? Result { get; set; }

@@ -8,7 +8,7 @@ namespace KPS_DojoM_models
 {
     public class TheResults
     {
-        public int? ResultId { get; set; }
+        public int? Id { get; set; }
         public string? ResultName { get; set; }
         public int? PodiumPlace { get; set; }
         public virtual List<Categories>? Category { get; set; }

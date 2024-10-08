@@ -8,7 +8,7 @@ namespace KPS_DojoM_models
 {
     public class Senseis
     {
-        public int? SenseiId { get; set; }
+        public int? Id { get; set; }
         public string? SeinseiName { get; set; } 
         public int? SenseiKYU { get; set; }
         public int? LicenceNumber { get; set; }
