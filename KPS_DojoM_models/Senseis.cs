@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KPS_DojoM_models
 {
-    internal class Senseis
+    public class Senseis
     {
         public int? SenseiId { get; set; }
         public string? SeinseiName { get; set; } 

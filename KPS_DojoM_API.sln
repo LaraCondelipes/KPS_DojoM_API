@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPS_DojoM_API", "KPS_DojoM_API\KPS_DojoM_API.csproj", "{4FD7031C-B70D-4F48-8853-728D2BF3499D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70D52F1B-5534-432F-A436-A446DCBE07CA} = {70D52F1B-5534-432F-A436-A446DCBE07CA}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPS_DojoM_models", "KPS_DojoM_models\KPS_DojoM_models.csproj", "{70D52F1B-5534-432F-A436-A446DCBE07CA}"
 EndProject

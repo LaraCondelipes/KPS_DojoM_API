@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KPS_DojoM_models
 {
-    internal class Parents
+   public class Parents
     {
         public int? ParentId { get; set; }
         public string? ParentName { get; set; }
