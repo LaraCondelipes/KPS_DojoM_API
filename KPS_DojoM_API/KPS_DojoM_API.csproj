@@ -28,8 +28,4 @@
     <ProjectReference Include="..\KPS_DojoM_models\KPS_DojoM_models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
