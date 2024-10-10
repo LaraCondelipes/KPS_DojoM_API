@@ -15,6 +15,6 @@ namespace KPS_DojoM_models
         public int? ParentNif { get; set; }
         public int? ParentCcNumber { get; set; }
         public string? ParentEmail { get; set; }
-        public int? AthleteId { get; set; }
+        public virtual List<Athletes>? athlete { get; set; }
     }
 }
