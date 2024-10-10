@@ -22,7 +22,7 @@ namespace KPS_DojoM_API.Repository
                 .ToList();
 
         }
-        public Association? Get(int id)
+        public Association? GetValue(int id)
         { 
         return context 
                 .Association
@@ -44,7 +44,7 @@ namespace KPS_DojoM_API.Repository
         }
         public void Delete(int id)
         { 
-        var entity = Get(id);
+        var entity = GetValue(id);
 
             if (entity != null)
             { 
