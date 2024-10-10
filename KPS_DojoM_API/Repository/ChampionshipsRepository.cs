@@ -20,7 +20,7 @@ namespace KPS_DojoM_API.Repository
                 .ToList();
         }
 
-        public Championships? Get(int id)
+        public Championships? GetValue(int id)
         {
             return context
                 .Championships
@@ -45,7 +45,7 @@ namespace KPS_DojoM_API.Repository
 
         public void Delete(int id)
         {
-            var value = Get(id);
+            var value = GetValue(id);
 
             if (value != null)
             {
