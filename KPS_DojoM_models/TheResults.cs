@@ -13,6 +13,7 @@ namespace KPS_DojoM_models
         public int? PodiumPlace { get; set; }
         public virtual List<Categories>? Category { get; set; }
         public virtual List<Events>? Event { get; set; }
+        public int AthleteId { get; set; }
 
 
     }

@@ -24,7 +24,7 @@ namespace KPS_DojoM_API.Controllers
         }
 
         //Get : api/Association/id
-        [HttpGet]
+        [HttpGet("{id}")]
         public Association GetAssociation(int id)
         {
             var association = _associationRepository.GetValue(id);

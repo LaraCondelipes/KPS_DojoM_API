@@ -21,7 +21,7 @@
         public int? ParentId { get; set; }
         public virtual Parents? Parents { get; set; }
 
-        public List<TheResults> Results { get; set; }   
+        public List<TheResults>? Results { get; set; }   
 
        
     }
