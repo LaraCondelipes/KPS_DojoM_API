@@ -18,6 +18,7 @@ namespace KPS_DojoM_API.Repository
             return context
                 .Athletes
                 .Include(x => x.Categories)
+                .Include(x=>x.Results)
                 .ToList();
         }
 
@@ -27,6 +28,7 @@ namespace KPS_DojoM_API.Repository
             return context
                 .Athletes
                 .Include(x => x.Categories)
+                .Include(x=>x.Results)
                 .FirstOrDefault(x => x.Id == id);
         }
 
