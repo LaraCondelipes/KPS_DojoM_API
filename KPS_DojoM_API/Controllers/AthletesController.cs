@@ -67,7 +67,7 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool AthletesExist(int id)
+        private bool AthletesExists(int id)
         {
             return _athletesRepository.All().Any(a => a.Id == id);
         }

@@ -68,7 +68,7 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        public bool ChampionshipsExist(int id)
+        public bool ChampionshipsExists(int id)
         { 
             return _championshipsRepository.All().Any(c => c.Id == id);
         }

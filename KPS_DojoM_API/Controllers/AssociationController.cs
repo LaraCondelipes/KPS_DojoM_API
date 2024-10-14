@@ -67,7 +67,7 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool AssociationExist(int id)
+        private bool AssociationExists(int id)
         {
             return _associationRepository.All().Any(x => x.Id == id);
         }

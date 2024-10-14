@@ -66,7 +66,7 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool ParentsExist(int id)
+        private bool ParentsExists(int id)
         { 
             return _parentsRepository.All().Any(p => p.Id == id);
         }

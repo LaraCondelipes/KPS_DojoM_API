@@ -66,7 +66,7 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool CategoriesExist(int id)
+        private bool CategoriesExists(int id)
         { 
             return _categoriesRepository.All().Any(c => c.Id == id);    
         }
