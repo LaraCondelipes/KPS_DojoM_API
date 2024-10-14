@@ -59,7 +59,7 @@ namespace KPS_DojoM_API.Controllers
         }
 
         //Delete
-        [HttpDelete("{id}"]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEvents(int id)
         {
             _eventsRepository.Delete(id);   
