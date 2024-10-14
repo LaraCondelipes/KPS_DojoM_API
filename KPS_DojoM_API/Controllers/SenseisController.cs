@@ -5,6 +5,8 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
+    [Route("api/[senseis]")]
+    [ApiController]
     public class SenseisController : ControllerBase
     {
         public readonly IRepository<Senseis> _senseisRepository;

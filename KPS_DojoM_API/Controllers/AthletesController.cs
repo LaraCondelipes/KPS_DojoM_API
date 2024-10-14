@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KPS_DojoM_API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[athletes]")]
     [ApiController]
     public class AthletesController : ControllerBase
     {

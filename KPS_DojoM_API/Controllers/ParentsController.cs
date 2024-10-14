@@ -5,6 +5,8 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
+    [Route("api/[parents]")]
+    [ApiController]
     public class ParentsController : ControllerBase
     {
         public readonly IRepository<Parents> _parentsRepository;

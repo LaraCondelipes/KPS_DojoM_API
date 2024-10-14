@@ -5,6 +5,8 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
+    [Route("api/[championships]")]
+    [ApiController]
     public class ChampionshipsController : ControllerBase
     {
 

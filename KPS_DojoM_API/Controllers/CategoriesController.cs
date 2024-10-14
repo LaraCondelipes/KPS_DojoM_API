@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KPS_DojoM_API.Controllers
 {
+    [Route("api/[categories]")]
+    [ApiController]
     public class CategoriesController : ControllerBase
     {
       public readonly IRepository<Categories> _categoriesRepository;

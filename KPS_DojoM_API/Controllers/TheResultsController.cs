@@ -5,6 +5,8 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
+    [Route("api/[theresults]")]
+    [ApiController]
     public class TheResultsController : ControllerBase
     {
         public readonly IRepository<TheResults> _theresultsRepository;

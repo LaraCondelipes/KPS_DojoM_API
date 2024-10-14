@@ -5,7 +5,6 @@ using KPS_DojoM_models;
 using KPS_DojoM_API.Repository;
 
 
-
 // Add services to the container.
 
 var builder = WebApplication.CreateBuilder(args);

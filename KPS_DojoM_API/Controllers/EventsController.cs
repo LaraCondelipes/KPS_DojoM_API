@@ -5,6 +5,8 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
+    [Route("api/[events]")]
+    [ApiController]
     public class EventsController : ControllerBase
     {
         public readonly IRepository<Events> _eventsRepository;
