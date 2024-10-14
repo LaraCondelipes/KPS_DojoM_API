@@ -2,6 +2,7 @@ using KPS_DojoM_API.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using KPS_DojoM_models;
+using KPS_DojoM_API.Repository;
 
 
 
@@ -16,6 +17,16 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//Add scopes
+builder.Services.AddScoped<IRepository<Association>, AssociationRepository>();
+builder.Services.AddScoped<IRepository<Athletes>, AthletesRepository>();
+builder.Services.AddScoped<IRepository<Categories>, CategoriesRepository>();
+builder.Services.AddScoped<IRepository<Championships>, ChampionshipsRepository>();
+builder.Services.AddScoped<IRepository<Events>, EventsRepository>();
+builder.Services.AddScoped<IRepository<Parents>, ParentsRepository>();
+builder.Services.AddScoped<IRepository<Senseis>, SenseisRepository>();
+builder.Services.AddScoped<IRepository<TheResults>, TheResultsRepository>();
 
 var app = builder.Build();
 

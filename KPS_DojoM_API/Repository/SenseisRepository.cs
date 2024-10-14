@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KPS_DojoM_API.Repository
 {
-    public class SeinseisRepository : IRepository<Senseis>
+    public class SenseisRepository : IRepository<Senseis>
     {
         public readonly KPS_DbContext context;
 
-        public SeinseisRepository(KPS_DbContext context)
+        public SenseisRepository(KPS_DbContext context)
         { 
             this.context = context;
         }
