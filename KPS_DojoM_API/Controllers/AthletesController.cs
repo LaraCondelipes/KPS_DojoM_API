@@ -23,7 +23,7 @@ namespace KPS_DojoM_API.Controllers
             return _athletesRepository.All();
         }
 
-        //Get : api/Athletes/id
+        //Get : Athletes/id
         [HttpGet("{id}")]
         public Athletes GetAthlete(int id)
         {
@@ -53,15 +53,28 @@ namespace KPS_DojoM_API.Controllers
 
         //Post
         [HttpPost]
+        public async Task<ActionResult<Athletes>> PostAthletes(Athletes athletes)
+        {
+         _athletesRepository.Add(athletes);
+        return CreatedAtAction("GetAthletes", new { id = athletes.Id}, athletes);
+        }
+
+        //Delete
+        [HttpDelete]
         public async Task<IActionResult> DeleteAthletes(int id)
-        { 
+        {
             _athletesRepository.Delete(id);
             return NoContent();
         }
 
         private bool AthletesExist(int id)
-        { 
-            return _athletesRepository.All().Any(a => a.Id == id);    
+        {
+            return _athletesRepository.All().Any(a => a.Id == id);
         }
+
+
     }
+
 }
+
+        
