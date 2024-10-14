@@ -31,7 +31,7 @@ namespace KPS_DojoM_API.Controllers
         }
 
         //Put
-        [HttpPut]
+        [HttpPut("{id}")]
         public void PutSenseis(int id, Senseis senseis)
         {
             if (id != senseis.Id)
@@ -60,7 +60,7 @@ namespace KPS_DojoM_API.Controllers
         }
 
         //Delete
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSenseis(int id)
         {
             _senseisRepository.Delete(id);

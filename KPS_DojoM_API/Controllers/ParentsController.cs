@@ -59,7 +59,7 @@ namespace KPS_DojoM_API.Controllers
         }
 
         //Delete
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteParents(int id)
         { 
             _parentsRepository.Delete(id);
