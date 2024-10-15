@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KPS_DojoM_API.Controllers
 {
-    [Route("api/[athletes]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AthletesController : ControllerBase
     {
@@ -67,10 +67,15 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool AthletesExists(int id)
-        {
-            return _athletesRepository.All().Any(a => a.Id == id);
-        }
+        //public IActionResult AthletesExists(int id)
+        //{
+        //    var exists = _athletesRepository.All().Any(c => c.Id == id);
+        //    if (exists)
+        //    {
+        //        return Ok();
+        //    }
+        //    return NotFound();
+        //}
 
 
     }

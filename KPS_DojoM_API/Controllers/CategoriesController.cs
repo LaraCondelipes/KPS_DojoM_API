@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KPS_DojoM_API.Controllers
 {
-    [Route("api/[categories]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
     {
@@ -68,9 +68,14 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool CategoriesExists(int id)
-        { 
-            return _categoriesRepository.All().Any(c => c.Id == id);    
-        }
+        //public IActionResult CategoriesExists(int id)
+        //{
+        //    var exists = _categoriesRepository.All().Any(c => c.Id == id);
+        //    if (exists)
+        //    {
+        //        return Ok();
+        //    }
+        //    return NotFound();
+        //}
     }
 }

@@ -5,7 +5,7 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
-    [Route("api/[events]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class EventsController : ControllerBase
     {
@@ -68,9 +68,14 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool EventsExits(int id)
-        { 
-            return _eventsRepository.All().Any(e => e.Id == id);
-        }
+        //public IActionResult EventsExists(int id)
+        //{
+        //    var exists = _eventsRepository.All().Any(c => c.Id == id);
+        //    if (exists)
+        //    {
+        //        return Ok();
+        //    }
+        //    return NotFound();
+        //}
     }
 }

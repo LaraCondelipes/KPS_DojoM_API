@@ -5,7 +5,7 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
-    [Route("api/[senseis]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class SenseisController : ControllerBase
     {
@@ -69,9 +69,14 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool SenseisExists(int id)
-        {
-            return _senseisRepository.All().Any(e => e.Id == id);
-        }
+        //public IActionResult SenseisExists(int id)
+        //{
+        //    var exists = _senseisRepository.All().Any(c => c.Id == id);
+        //    if (exists)
+        //    {
+        //        return Ok();
+        //    }
+        //    return NotFound();
+        //}
     }
 }

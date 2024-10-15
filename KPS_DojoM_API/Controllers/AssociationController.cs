@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KPS_DojoM_API.Controllers
 {
-    [Route("api/[association]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AssociationController : ControllerBase
     {
@@ -67,10 +67,15 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool AssociationExists(int id)
-        {
-            return _associationRepository.All().Any(x => x.Id == id);
-        }
+        //public IActionResult AssociationExists(int id)
+        //{
+        //    var exists = _associationRepository.All().Any(c => c.Id == id);
+        //    if (exists)
+        //    {
+        //        return Ok();
+        //    }
+        //    return NotFound();
+        //}
 
 
     }

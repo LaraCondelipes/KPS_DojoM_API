@@ -5,7 +5,7 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
-    [Route("api/[parents]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ParentsController : ControllerBase
     {
@@ -68,9 +68,14 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        private bool ParentsExists(int id)
-        { 
-            return _parentsRepository.All().Any(p => p.Id == id);
-        }
+        //public IActionResult ParentsExists(int id)
+        //{
+        //    var exists = _parentsRepository.All().Any(c => c.Id == id);
+        //    if (exists)
+        //    {
+        //        return Ok();
+        //    }
+        //    return NotFound();
+        //}
     }
 }

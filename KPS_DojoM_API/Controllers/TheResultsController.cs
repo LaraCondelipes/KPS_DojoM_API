@@ -5,7 +5,7 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
-    [Route("api/[theresults]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class TheResultsController : ControllerBase
     {
@@ -17,6 +17,7 @@ namespace KPS_DojoM_API.Controllers
         }
 
         //Get
+        [HttpGet]
         public IEnumerable<TheResults> GetTheResults()
         { 
           return  _theresultsRepository.All();
@@ -66,10 +67,15 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        public bool TheResultsExists(int id)
-        { 
-            return _theresultsRepository.All().Any(x => x.Id == id);    
-        }
+        //public IActionResult TheResultsExists(int id)
+        //{
+        //    var exists = _theresultsRepository.All().Any(c => c.Id == id);
+        //    if (exists)
+        //    {
+        //        return Ok();
+        //    }
+        //    return NotFound();
+        //}
 
 
 

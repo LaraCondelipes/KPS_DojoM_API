@@ -5,7 +5,7 @@ using System.Data;
 
 namespace KPS_DojoM_API.Controllers
 {
-    [Route("api/[championships]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ChampionshipsController : ControllerBase
     {
@@ -70,9 +70,14 @@ namespace KPS_DojoM_API.Controllers
             return NoContent();
         }
 
-        public bool ChampionshipsExists(int id)
-        { 
-            return _championshipsRepository.All().Any(c => c.Id == id);
-        }
+        //public IActionResult ChampionshipsExists(int id)
+        //{ 
+        //    var exists = _championshipsRepository.All().Any(c => c.Id == id);
+        //    if (exists)
+        //    { 
+        //        return Ok();
+        //    }
+        //    return NotFound();
+        //}
     }
 }

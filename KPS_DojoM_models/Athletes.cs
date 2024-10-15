@@ -1,10 +1,14 @@
-﻿namespace KPS_DojoM_models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace KPS_DojoM_models
 {
     public class Athletes
     {
         public int? Id { get; set; }
         public int? AthleteKYU { get; set; }
         public string? AthleteName { get; set; }
+
+        [DataType(DataType.Date)]  //forces only the date to be rendered
         public DateTime? AthleteBirthdayDate { get; set; } 
         public string? AthleteAddress { get; set; }
         public string? AthleteEmail { get; set; }
