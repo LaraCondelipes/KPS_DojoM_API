@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPS_DojoM_API", "KPS_DojoM_API\KPS_DojoM_API.csproj", "{4FD7031C-B70D-4F48-8853-728D2BF3499D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KPS_DojoM_API", "KPS_DojoM_API\KPS_DojoM_API.csproj", "{4FD7031C-B70D-4F48-8853-728D2BF3499D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{70D52F1B-5534-432F-A436-A446DCBE07CA} = {70D52F1B-5534-432F-A436-A446DCBE07CA}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPS_DojoM_models", "KPS_DojoM_models\KPS_DojoM_models.csproj", "{70D52F1B-5534-432F-A436-A446DCBE07CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KPS_DojoM_models", "KPS_DojoM_models\KPS_DojoM_models.csproj", "{70D52F1B-5534-432F-A436-A446DCBE07CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KPS_DojoM_Blazor", "KPS_DojoM_Blazor\KPS_DojoM_Blazor.csproj", "{34B0AC12-2E2F-45E2-ADD8-F0A7AF16C1AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{70D52F1B-5534-432F-A436-A446DCBE07CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70D52F1B-5534-432F-A436-A446DCBE07CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70D52F1B-5534-432F-A436-A446DCBE07CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B0AC12-2E2F-45E2-ADD8-F0A7AF16C1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B0AC12-2E2F-45E2-ADD8-F0A7AF16C1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B0AC12-2E2F-45E2-ADD8-F0A7AF16C1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B0AC12-2E2F-45E2-ADD8-F0A7AF16C1AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

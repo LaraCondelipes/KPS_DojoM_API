@@ -35,7 +35,7 @@ namespace KPS_DojoM_API.Controllers
         [HttpPut("{id}")]
         public void PutCategories(int id, Categories categories)
         {
-            if (id != categories.Id)
+            if (id != categories.CategoriesId)
             {
                 return;
             }
@@ -57,7 +57,7 @@ namespace KPS_DojoM_API.Controllers
         public async Task<ActionResult<Categories>> PostCategories(Categories categories)
         { 
             _categoriesRepository.Add(categories);
-            return CreatedAtAction("GetCategories", new { id = categories.Id }, categories);
+            return CreatedAtAction("GetCategories", new { id = categories.CategoriesId }, categories);
         }
 
         //Delete

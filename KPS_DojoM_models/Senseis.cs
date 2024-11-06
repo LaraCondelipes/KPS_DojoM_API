@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace KPS_DojoM_models
 {
@@ -16,7 +17,8 @@ namespace KPS_DojoM_models
         public string? SenseiEmail { get; set; }
         public int AssociationMemberNumber { get; set; }
         public int? AssociationId { get; set; }
-        public Association? Association { get; set; }
+        [JsonIgnore]
+        public virtual Association? Association { get; set; }
 
     }
 }

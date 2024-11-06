@@ -1,0 +1,87 @@
+﻿ @rendermode InteractiveServer
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+       
+     @*    Nav bar menu authorisations depending on who is logged in *@
+        <Authorized> </Authorized>
+
+        <NotAuthorized></NotAuthorized>
+
+        <a class="navbar-brand" href="#">
+            <img src="\images\kps_symbol.jpg" alt="KPS Montijo" />
+
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Senseis">Sensei's</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Associacao">Associação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/ClassesShedules">Turmas e Horários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Traineeships">Estágios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Championships">Campeomatos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Events">Eventos</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/RegisterAthlete">Inscrever atleta</a>
+                </li>
+            </ul>
+
+
+
+        </div>
+   
+       
+       @*  popup *@
+        <Modal @ref="modal" Title="Login">
+    <BodyTemplate>
+       <div class="form-input__wrapper">
+           <div class="zds-input-base form-input-text__input zds-input-base--full-width zds-input-base--has-error">
+               <label class="zds-input-base__label" for="email" id="zds">E-mail:</label>
+               <input class="zds-input-base__input" id="email" name="email" type="text" /><br />
+                <label class="zds-input-base__label" for="password" id="zds">Password:</label>
+               <input class="zds-input-base__input" id="password" name="password" type="text" />
+               
+               <div class="zds-input-base__border"></div>
+           </div>
+       </div>
+    </BodyTemplate>
+    <FooterTemplate>
+      <button type="button" class="btn btn-secondary" @onclick="OnHideModalClick">Close</button>
+      <button type="button" class="btn btn-outline-danger">Guardar</button>
+    </FooterTemplate>
+</Modal>
+
+<button type="button" class="btn btn-light"  @onclick="OnShowModalClick">Login</button>
+
+    </div>
+
+</nav>
+
+@code {
+    private Modal modal;
+
+    private async Task OnShowModalClick()
+    {
+        await modal?.ShowAsync();
+    }
+
+    private async Task OnHideModalClick()
+    {
+        await modal?.HideAsync();
+    }
+}

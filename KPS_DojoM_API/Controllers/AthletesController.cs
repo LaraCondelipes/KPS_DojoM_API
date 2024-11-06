@@ -35,7 +35,7 @@ namespace KPS_DojoM_API.Controllers
         [HttpPut("{id}")]
         public void PutAthletes(int id, Athletes athletes)
         {
-            if (id != athletes.Id)
+            if (id != athletes.AthletesId)
             {
                 return;
             }
@@ -56,7 +56,7 @@ namespace KPS_DojoM_API.Controllers
         public async Task<ActionResult<Athletes>> PostAthletes(Athletes athletes)
         {
          _athletesRepository.Add(athletes);
-        return CreatedAtAction("GetAthletes", new { id = athletes.Id}, athletes);
+        return CreatedAtAction("GetAthletes", new { id = athletes.AthletesId}, athletes);
         }
 
         //Delete

@@ -35,7 +35,7 @@ namespace KPS_DojoM_API.Controllers
         [HttpPut("{id}")]
         public void PutAssociation(int id, Association association)
         {
-            if (id != association.Id)
+            if (id != association.AssociationId)
             { 
                 return;
             }
@@ -56,7 +56,7 @@ namespace KPS_DojoM_API.Controllers
         public async Task<ActionResult<Association>> PostAssociation(Association association)
         {
             _associationRepository.Add(association);
-            return CreatedAtAction("GetAssociation", new { id = association.Id }, association);
+            return CreatedAtAction("GetAssociation", new { id = association.AssociationId }, association);
         }
 
         //Delete

@@ -17,8 +17,9 @@ namespace KPS_DojoM_API.Repository
         {
             return context
                 .Athletes
-                .Include(x => x.Categories)
-                .Include(x=>x.Results)
+                .Include(x => x.Parents)
+                .Include(x => x.Results)
+                .Include(x => x.Association)
                 .ToList();
         }
 
@@ -27,9 +28,10 @@ namespace KPS_DojoM_API.Repository
         {
             return context
                 .Athletes
-                .Include(x => x.Categories)
-                .Include(x=>x.Results)
-                .FirstOrDefault(x => x.Id == id);
+                .Include(x => x.Parents)
+                .Include(x => x.Results)
+                .Include(x => x.Association)
+                .FirstOrDefault(x => x.AthletesId == id);
         }
 
         public Athletes Add(Athletes entity)

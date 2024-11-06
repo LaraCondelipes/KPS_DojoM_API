@@ -17,7 +17,8 @@ namespace KPS_DojoM_API.Repository
         {
             return context
                 .Categories
-                .Include(x => x.Event)
+                .Include(x => x.Events)
+                .Include(x => x.TheResults)
                 .ToList();
         }
 
@@ -25,8 +26,9 @@ namespace KPS_DojoM_API.Repository
         {
            return context
                 .Categories
-                .Include(x => x.Event)
-                .FirstOrDefault(x => x.Id == id);
+                .Include(x => x.Events)
+                .Include(x => x.TheResults)
+                .FirstOrDefault(x => x.CategoriesId == id);
         }
         public Categories Add(Categories entity)
         {

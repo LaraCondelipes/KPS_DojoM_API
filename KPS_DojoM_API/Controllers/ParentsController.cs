@@ -36,7 +36,7 @@ namespace KPS_DojoM_API.Controllers
         [HttpPut("{id}")]
         public void PutParents(int id, Parents parents)
         {
-            if (id != parents.Id)
+            if (id != parents.ParentsId)
             {
                 return;
             }
@@ -57,7 +57,7 @@ namespace KPS_DojoM_API.Controllers
         public async Task<ActionResult<Parents>> PostParents(Parents parents)
         {
             _parentsRepository.Add(parents);
-            return CreatedAtAction("GetParents", new { id = parents.Id }, parents);
+            return CreatedAtAction("GetParents", new { id = parents.ParentsId }, parents);
         }
 
         //Delete

@@ -18,7 +18,7 @@ namespace KPS_DojoM_API.Repository
         { 
             return context
                 .Parents
-                .Include(x=>x.athlete)
+                .Include(x=>x.Athlete)
                 .ToList();
         }
 
@@ -26,8 +26,8 @@ namespace KPS_DojoM_API.Repository
         {
             return context
                 .Parents
-                .Include(x=>x.athlete)
-                .FirstOrDefault(x=>x.Id==id);
+                .Include(x=>x.Athlete)
+                .FirstOrDefault(x=>x.ParentsId==id);
         }
 
         public Parents Add(Parents value)

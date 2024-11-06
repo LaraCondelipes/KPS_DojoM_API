@@ -16,7 +16,8 @@ namespace KPS_DojoM_API.Repository
         { 
          return context
                 .Championships
-                .Include(x => x.Result)
+                .Include(x => x.Association)
+                .Include(x => x.Events)
                 .ToList();
         }
 
@@ -24,8 +25,9 @@ namespace KPS_DojoM_API.Repository
         {
             return context
                 .Championships
-                .Include(x => x.Result)
-                .FirstOrDefault(x => x.Id == id); 
+                .Include(x => x.Association)
+                .Include(x => x.Events)
+                .FirstOrDefault(x => x.ChampionshipsId == id); 
         }
 
         public Championships Add(Championships value)

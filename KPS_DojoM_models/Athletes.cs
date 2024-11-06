@@ -1,11 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+
 
 namespace KPS_DojoM_models
 {
     public class Athletes
     {
-        public int? Id { get; set; }
-        public int? AthleteKYU { get; set; }
+        [Key]
+        public int? AthletesId { get; set; }
+        public string? AthleteGraduation { get; set; }
         public string? AthleteName { get; set; }
 
         [DataType(DataType.Date)]  //forces only the date to be rendered
@@ -18,15 +23,18 @@ namespace KPS_DojoM_models
         public string? Club { get; set; }
         public int? AthleteClubMemberNumber { get; set; }
         public int? AssociationMemberNumber { get; set; }
-        public int? CategoryId { get; set; }
-        public virtual Categories? Categories { get; set; }
+
+        [ForeignKey("AssociationId")]
         public int? AssociationId { get; set; }
+        [JsonIgnore]
         public virtual Association? Association { get; set; }
-        public int? ParentId { get; set; }
+        [ForeignKey("ParentId")]
+        public int? ParentsId { get; set; }
+        [JsonIgnore]
         public virtual Parents? Parents { get; set; }
 
-        public List<TheResults>? Results { get; set; }   
-
+        [JsonIgnore]
+        public virtual List<TheResults>? Results { get; set; }   
        
     }
 }

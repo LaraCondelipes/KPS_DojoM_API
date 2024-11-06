@@ -1,7 +1,11 @@
 ﻿using KPS_DojoM_API.Repository;
 using KPS_DojoM_models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using System.Data;
+using System.Web.Http.OData;
 
 namespace KPS_DojoM_API.Controllers
 {
@@ -32,35 +36,38 @@ namespace KPS_DojoM_API.Controllers
             return championships;
         }
 
+        //Post
+        [HttpPost]
+        public async Task<ActionResult<Championships>> PostChampionships(Championships championships)
+        {
+            _championshipsRepository.Add(championships);
+            return CreatedAtAction("GetChampionships", new { id = championships.ChampionshipsId }, championships);
+
+        }
+
+
+
         //Put
         [HttpPut("{id}")]
         public void PutChampionships(int id, Championships championships)
         {
-            if (id != championships.Id)
+            if (id != championships.ChampionshipsId)
             {
                 return;
             }
             try
             {
                 _championshipsRepository.Update(championships);
+
             }
-            catch (DBConcurrencyException)
+            catch (DbUpdateConcurrencyException)
             {
                 throw;
             }
 
             return;
-
         }
 
-        //Post
-        [HttpPost]
-        public async Task<ActionResult<Championships>> PostChampionships(Championships championships)
-        { 
-            _championshipsRepository.Add(championships);
-            return CreatedAtAction("GetChampionships", new { id = championships.Id }, championships);
-
-        }
 
         //Delete
         [HttpDelete("{id}")]

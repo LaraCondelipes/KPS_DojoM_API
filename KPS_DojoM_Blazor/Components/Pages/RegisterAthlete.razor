@@ -1,0 +1,211 @@
+﻿@page "/RegisterAthlete"
+
+<h1>Welcome</h1>
+
+
+<form>
+    <div class="row">
+        <div class="form-group">
+            <InputFile OnChange="@LoadFile"></InputFile>
+        </div>
+        <div class="form-group">
+            <label for="input AssociationMemberNumber">Associado Nº:</label>
+            <input type="text" class="form-control" id="associationMemberNumber"/>
+
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="inputFullName">Name:</label>
+            <input type="text" class="form-control" id="fullName" />
+        </div>
+
+        <div class="form-group">
+            <label for="inputClub">Clube:</label>
+            <input type="text" class="form-control" id="club" />
+        </div>
+        <div class="form-group">
+            <label for="inputAffiliation">Filiação:</label>
+            <input type="text" class="form-control" id="affiliation"/>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="inputBirthDte">Data de Nascimento:</label>
+                <input type="text" class="form-control" id="birthDate" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputNative">Naturalidade:</label>
+            <input type="text" class="form-control" id="native"/>
+        </div>
+        <div class="form-group">
+            <label for="inputNationality">Nacionalidade:</label>
+            <input type="text" class="form-control" id="nationality"/>
+        </div>
+        <div class="form-group">
+            <label for="inputstate">Estado:</label>
+            <input type="text" class="form-control" id="state"/>
+        </div>
+        <div class="form-group">
+            <label for="inputCcNumber">C.C. Nº:</label>
+            <input type="text" class="form-control" id="ccNumber"/>
+            <label for="inputExpiry">Validade:</label>
+            <input type="text" class="form-control" id="expiry">
+            <label for="inputVat">NIF Nº:</label>
+            <input type="text" class="form-control" id="vat"  />
+        </div>
+
+        <div class="form-group">
+            <label for="inputAdress">Morada:</label>
+            <input type="text" class="form-control" id="adress"  />
+            <label for="inputLocation">Localidade:</label>
+            <input type="text" class="form-control" id="location" >
+            <label for="inputZip">Código Postal:</label>
+            <input type="text" class="form-control" id="inputZip" />
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="inputPhone">Contacto:</label>
+            <input type="text" class="form-control" id="vat" />
+            <label for="inputEmail">E-mail:</label>
+            <input type="text" class="form-control" id="email" />
+            <label for="inputOccupation">Profissão:</label>
+            <input type="text" class="form-control" id="vat"  />
+
+        </div>
+        <div class="form-group">
+            <label for="input">Fed. Nº:</label>
+            <input type="text" class="form-control" id="fed"  />
+            <label for="input">LPKS Nº:</label>
+            <input type="text" class="form-control" id="vat"  />
+            <label for="input">Data de inscrição:</label>
+            <input type="text" class="form-control" id="registrationDate"  />
+        </div>
+        <div class="form-group">
+            
+            <label for="input">Assinatura:</label>
+            <input type="text" class="form-control" id="signature" />
+            <label for="input"> Assinatura E.Educação: </label>
+            <input type="text" class="form-control" id=" parentSignature" />
+        </div>
+        
+        <div class="form-group">
+            <table class="table table-success table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">KYU</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">DAN</th>
+                        <th scope="col">Data</th>
+                    </tr>
+
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <th scope="row">9º</th>
+                        <th input scope="row"></th>
+                        <th scope="row">C. Preto</th>
+                        <th input scope="row"></th>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">8º</th>
+                        <th input scope="row"></th>
+                        <th scope="row">1º</th>
+                        <th input scope="row"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">7º</th>
+                        <th input scope="row"></th>
+                        <th scope="row">2º</th>
+                        <th input scope="row"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">6º</th>
+                        <th input scope="row"></th>
+                        <th scope="row">3º</th>
+                        <th input scope="row"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">5º</th>
+                        <th input scope="row"></th>
+                        <th scope="row">4º</th>
+                        <th input scope="row"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">4º</th>
+                        <th input scope="row"></th>
+                        <th scope="row">5º</th>
+                        <th input scope="row"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">3º</th>
+                        <th input scope="row"></th>
+                        <th scope="row">6º</th>
+                        <th input scope="row"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">2º</th>
+                        <th input scope="row"></th>
+                        <th scope="row">7º</th>
+                        <th input scope="row"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">1º</th>
+                        <th input scope="row"></th>
+                        <th scope="row">8º</th>
+                        <th input scope="row"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       
+
+    </div>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+
+   
+
+
+</form>
+  
+
+    
+    
+   
+       
+
+
+            @code {
+                //Method for upload athlete photo
+
+                //max size of the photo
+                private long maxFileSize = 1024 * 1024 * 6;
+                //max number of uploaded photos
+                private int maxAllowedFiles = 1;
+                private List<string> errors = new();
+
+                private async Task LoadFile(InputFileChangeEventArgs e)
+                {
+                errors.Clear();
+
+                if (e.FileCount > maxAllowedFiles)
+                {
+                errors.Add($"Error: Attempting to upload {e.FileCount} files, but only {maxAllowedFiles} file.");
+                return;
+
+                foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+                {
+                // ensures that the user does not enter the same document twice
+                string newFileName = Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(file.Name));
+                }
+                }
+
+                }
+
+            }

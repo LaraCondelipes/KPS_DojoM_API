@@ -18,16 +18,16 @@ namespace KPS_DojoM_API.Repository
         {
             return context
                 .Association
-                .Include(b =>  b.Athlete)
+                .Include(b => b.Athletes)
                 .ToList();
 
         }
         public Association? GetValue(int id)
-        { 
-        return context 
-                .Association
-                .Include(b => b.Athlete)
-                .FirstOrDefault(b => b.Id == id);
+        {
+            return context
+                    .Association
+                    .Include(b => b.Athletes)
+                    .FirstOrDefault(b => b.AssociationId == id);
         }
         public Association Add(Association entity)
         {
@@ -38,21 +38,21 @@ namespace KPS_DojoM_API.Repository
         }
 
         public void Update(Association entity)
-        { 
+        {
             context.Entry(entity).State = EntityState.Modified;
             context.SaveChanges();
         }
         public void Delete(int id)
-        { 
-        var entity = GetValue(id);
+        {
+            var entity = GetValue(id);
 
             if (entity != null)
-            { 
+            {
                 context.Association.Remove(entity);
                 context.SaveChanges();
             }
         }
 
-     
+
     }
 }

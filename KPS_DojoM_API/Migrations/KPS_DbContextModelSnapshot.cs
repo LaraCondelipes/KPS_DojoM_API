@@ -24,44 +24,44 @@ namespace KPS_DojoM_API.Migrations
 
             modelBuilder.Entity("CategoriesEvents", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("CategoriesId")
                         .HasColumnType("int");
 
-                    b.Property<int>("EventId")
+                    b.Property<int>("EventsId")
                         .HasColumnType("int");
 
-                    b.HasKey("CategoryId", "EventId");
+                    b.HasKey("CategoriesId", "EventsId");
 
-                    b.HasIndex("EventId");
+                    b.HasIndex("EventsId");
 
                     b.ToTable("CategoriesEvents");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Association", b =>
                 {
-                    b.Property<int?>("Id")
+                    b.Property<int?>("AssociationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("AssociationId"));
 
                     b.Property<string>("AssociationName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("AssociationId");
 
                     b.ToTable("Association");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Athletes", b =>
                 {
+                    b.Property<int?>("AthletesId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("AthletesId"));
+
                     b.Property<int?>("AssociationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ParentId")
                         .HasColumnType("int");
 
                     b.Property<int?>("AssociationMemberNumber")
@@ -85,8 +85,8 @@ namespace KPS_DojoM_API.Migrations
                     b.Property<string>("AthleteEmail")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("AthleteKYU")
-                        .HasColumnType("int");
+                    b.Property<string>("AthleteGraduation")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AthleteName")
                         .HasColumnType("nvarchar(max)");
@@ -94,21 +94,15 @@ namespace KPS_DojoM_API.Migrations
                     b.Property<int?>("AthleteNif")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CategoriesId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Club")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("Id")
-                        .HasColumnType("int");
 
                     b.Property<int?>("ParentsId")
                         .HasColumnType("int");
 
-                    b.HasKey("AssociationId", "CategoryId", "ParentId");
+                    b.HasKey("AthletesId");
 
-                    b.HasIndex("CategoriesId");
+                    b.HasIndex("AssociationId");
 
                     b.HasIndex("ParentsId");
 
@@ -117,40 +111,41 @@ namespace KPS_DojoM_API.Migrations
 
             modelBuilder.Entity("KPS_DojoM_models.Categories", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CategoriesId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoriesId"));
 
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("TheResultsId")
-                        .HasColumnType("int");
+                    b.Property<string>("Kyu")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.Property<decimal?>("Weight")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.HasIndex("TheResultsId");
+                    b.HasKey("CategoriesId");
 
                     b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Championships", b =>
                 {
-                    b.Property<int?>("Id")
+                    b.Property<int?>("ChampionshipsId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("ChampionshipsId"));
 
                     b.Property<int?>("AssociationId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ChampionshipName")
-                        .HasColumnType("int");
+                    b.Property<string>("ChampionshipName")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ChampionshipsId");
 
                     b.HasIndex("AssociationId");
 
@@ -165,26 +160,29 @@ namespace KPS_DojoM_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"));
 
+                    b.Property<int?>("ChampionshipId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ChampionshipsId")
+                        .HasColumnType("int");
+
                     b.Property<string>("EventName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("TheResultsId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("TheResultsId");
+                    b.HasIndex("ChampionshipsId");
 
                     b.ToTable("Events");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Parents", b =>
                 {
-                    b.Property<int?>("Id")
+                    b.Property<int?>("ParentsId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("ParentsId"));
 
                     b.Property<string>("ParentAddress")
                         .HasColumnType("nvarchar(max)");
@@ -204,7 +202,7 @@ namespace KPS_DojoM_API.Migrations
                     b.Property<int?>("ParentNif")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("ParentsId");
 
                     b.ToTable("Parents");
                 });
@@ -253,19 +251,10 @@ namespace KPS_DojoM_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"));
 
-                    b.Property<int>("AthleteId")
+                    b.Property<int?>("AthletesId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("AthletesAssociationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("AthletesCategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("AthletesParentId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ChampionshipsId")
+                    b.Property<int?>("CategoriesId")
                         .HasColumnType("int");
 
                     b.Property<int?>("PodiumPlace")
@@ -276,9 +265,9 @@ namespace KPS_DojoM_API.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ChampionshipsId");
+                    b.HasIndex("AthletesId");
 
-                    b.HasIndex("AthletesAssociationId", "AthletesCategoryId", "AthletesParentId");
+                    b.HasIndex("CategoriesId");
 
                     b.ToTable("TheResults");
                 });
@@ -287,13 +276,13 @@ namespace KPS_DojoM_API.Migrations
                 {
                     b.HasOne("KPS_DojoM_models.Categories", null)
                         .WithMany()
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("CategoriesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KPS_DojoM_models.Events", null)
                         .WithMany()
-                        .HasForeignKey("EventId")
+                        .HasForeignKey("EventsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -301,45 +290,34 @@ namespace KPS_DojoM_API.Migrations
             modelBuilder.Entity("KPS_DojoM_models.Athletes", b =>
                 {
                     b.HasOne("KPS_DojoM_models.Association", "Association")
-                        .WithMany("Athlete")
-                        .HasForeignKey("AssociationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("KPS_DojoM_models.Categories", "Categories")
-                        .WithMany("Athlete")
-                        .HasForeignKey("CategoriesId");
+                        .WithMany("Athletes")
+                        .HasForeignKey("AssociationId");
 
                     b.HasOne("KPS_DojoM_models.Parents", "Parents")
-                        .WithMany("athlete")
+                        .WithMany("Athlete")
                         .HasForeignKey("ParentsId");
 
                     b.Navigation("Association");
 
-                    b.Navigation("Categories");
-
                     b.Navigation("Parents");
-                });
-
-            modelBuilder.Entity("KPS_DojoM_models.Categories", b =>
-                {
-                    b.HasOne("KPS_DojoM_models.TheResults", null)
-                        .WithMany("Category")
-                        .HasForeignKey("TheResultsId");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Championships", b =>
                 {
-                    b.HasOne("KPS_DojoM_models.Association", null)
+                    b.HasOne("KPS_DojoM_models.Association", "Association")
                         .WithMany("Championships")
                         .HasForeignKey("AssociationId");
+
+                    b.Navigation("Association");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Events", b =>
                 {
-                    b.HasOne("KPS_DojoM_models.TheResults", null)
-                        .WithMany("Event")
-                        .HasForeignKey("TheResultsId");
+                    b.HasOne("KPS_DojoM_models.Championships", "Championships")
+                        .WithMany("Events")
+                        .HasForeignKey("ChampionshipsId");
+
+                    b.Navigation("Championships");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Senseis", b =>
@@ -353,18 +331,22 @@ namespace KPS_DojoM_API.Migrations
 
             modelBuilder.Entity("KPS_DojoM_models.TheResults", b =>
                 {
-                    b.HasOne("KPS_DojoM_models.Championships", null)
-                        .WithMany("Result")
-                        .HasForeignKey("ChampionshipsId");
-
-                    b.HasOne("KPS_DojoM_models.Athletes", null)
+                    b.HasOne("KPS_DojoM_models.Athletes", "Athletes")
                         .WithMany("Results")
-                        .HasForeignKey("AthletesAssociationId", "AthletesCategoryId", "AthletesParentId");
+                        .HasForeignKey("AthletesId");
+
+                    b.HasOne("KPS_DojoM_models.Categories", "Categories")
+                        .WithMany("TheResults")
+                        .HasForeignKey("CategoriesId");
+
+                    b.Navigation("Athletes");
+
+                    b.Navigation("Categories");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Association", b =>
                 {
-                    b.Navigation("Athlete");
+                    b.Navigation("Athletes");
 
                     b.Navigation("Championships");
                 });
@@ -376,24 +358,17 @@ namespace KPS_DojoM_API.Migrations
 
             modelBuilder.Entity("KPS_DojoM_models.Categories", b =>
                 {
-                    b.Navigation("Athlete");
+                    b.Navigation("TheResults");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Championships", b =>
                 {
-                    b.Navigation("Result");
+                    b.Navigation("Events");
                 });
 
             modelBuilder.Entity("KPS_DojoM_models.Parents", b =>
                 {
-                    b.Navigation("athlete");
-                });
-
-            modelBuilder.Entity("KPS_DojoM_models.TheResults", b =>
-                {
-                    b.Navigation("Category");
-
-                    b.Navigation("Event");
+                    b.Navigation("Athlete");
                 });
 #pragma warning restore 612, 618
         }
