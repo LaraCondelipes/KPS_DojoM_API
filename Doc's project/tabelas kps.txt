@@ -1,0 +1,310 @@
+//tabelas kps
+
+<div class="form-group">
+    <table class="table table-success table-bordered">
+        <br/>
+        <p>Graduações KPS</p>
+        <thead>
+            <tr class="table-danger">
+                <th scope="col">KYU</th>
+                <th scope="col">Data</th>
+                <th scope="col">DAN</th>
+                <th scope="col">Data</th>
+            </tr>
+
+        </thead>
+        <tbody class="table-group-divider">
+           
+            <tr class="table-light">
+                <th scope="row">9º</th>
+                <th scope="row"><input type="text" /></th>
+                <th scope="row">C. Preto</th>
+                <th scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">8º</th>
+                <th scope="row"><input type="text" /></th>
+                <th scope="row">1º</th>
+                <th scope="row"><input type="text" /></th>
+            </tr>
+            <tr class="table-light">
+                <th scope="row">7º</th>
+                <th scope="row"><input type="text" /></th>
+                <th scope="row">2º</th>
+                <th scope="row"><input type="text" /></th>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">6º</th>
+                <th scope="row"><input type="text" /></th>
+                <th scope="row">3º</th>
+                <th scope="row"><input type="text" /></th>
+            </tr>
+            <tr class="table-light">
+                <th scope="row">5º</th>
+                <th scope="row"><input type="text" /></th>
+                <th scope="row">4º</th>
+                <th scope="row"><input type="text" /></th>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">4º</th>
+                <th scope="row"><input type="text" /></th>
+                <th scope="row">5º</th>
+                <th scope="row"><input type="text" /></th>
+            </tr>
+            <tr class="table-light">
+                <th scope="row">3º</th>
+                <th scope="row"><input type="text" /></th>
+                <th scope="row">6º</th>
+                <th scope="row"><input type="text" /></th>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">2º</th>
+                <th scope="row"><input type="text" /></th>
+                <th scope="row">7º</th>
+                <th scope="row"><input type="text" /></th>
+            </tr>
+            <tr class="table-light">
+                <th scope="row">1º</th>
+                <th scope="row"><input type="text" /></th>
+                <th scope="row">8º</th>
+                <th scope="row"><input type="text" /></th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <table class="table table-success table-bordered">
+        <br/>
+        <p>Graduações Internacionais</p>
+        <thead>
+            <tr class="table-light">
+                <th scope="col">DAN</th>
+                <th scope="col">Data</th>
+            </tr>
+
+        </thead>
+        <tbody class="table-group-divider">
+
+            <tr class="table-danger"
+                <th scope="row">1º</th>
+                <th input scope="row"><input type="text" /></th>
+               
+
+            </tr>
+            <tr class="table-light">
+                <th scope="row">2º</th>
+                <th input scope="row"><input type="text" /></th>
+               
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">3º</th>
+                <th input scope="row"><input type="text" /></th>
+              
+            </tr>
+            <tr class="table-light">
+                <th scope="row">4º</th>
+                <th input scope="row"><input type="text" /></th>
+                
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">5º</th>
+                <th input scope="row"><input type="text" /></th>
+               
+            </tr>
+            <tr class="table-light">
+                <th scope="row">6º</th>
+                <th input scope="row"><input type="text" /></th>
+               
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">7º</th>
+                <th input scope="row"><input type="text" /></th>
+             
+            </tr>
+            <tr class="table-light">
+                <th scope="row">8º</th>
+                <th input scope="row"><input type="text" /></th>
+               
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">9º</th>
+                <th scope="row"><input type="text"/></th>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <table class="table table-success table-bordered">
+        <br />
+        <p>Graduações FNK-P</p>
+        <thead>
+            <tr class="table-light">
+                <th scope="col">DAN</th>
+                <th scope="col">Data</th>
+            </tr>
+
+        </thead>
+        <tbody class="table-group-divider">
+
+            <tr class="table-danger">
+                <th scope="row">1º</th>
+                <th input scope="row"><input type="text" /></th>
+
+
+            </tr>
+            <tr class="table-light">
+                <th scope="row">2º</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">3º</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr>
+                <th scope="row">4º</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-light">
+                <th scope="row">5º</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">6º</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-light">
+                <th scope="row">7º</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">8º</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-light">
+                <th scope="row">9º</th>
+                <th scope="row"><input type="text" /></th>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <table class="table table-success table-bordered">
+        <br />
+        <p>Árbrito de Estilo</p>
+        <thead>
+            <tr class="table-danger">
+                <th scope="col">Categoria</th>
+                <th scope="col">Data</th>
+            </tr>
+
+        </thead>
+        <tbody class="table-group-divider">
+
+            <tr class="table-light">
+                <th scope="row">Juís de KUMITE (E)</th>
+                <th input scope="row"><input type="text" /></th>
+
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Juíz de KATA (D)</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-light">
+                <th scope="row">Árbrito de KUMITE (C)</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Árbrito Nacional (B)</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-light">
+                <th scope="row">Árbrito Internacional (A)</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Auxiliar de Mesa</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-light">
+                <th scope="row">Auxiliar de Mesa Federativo</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <table class="table table-success table-bordered">
+        <br />
+        <p>Árbrito Federativo</p>
+        <thead>
+            <tr class="table-danger">
+                <th scope="col">Juíz Regional</th>
+                <th scope="col">Data</th>
+            </tr>
+
+        </thead>
+        <tbody class="table-group-divider">
+
+            <tr class="table-light">
+                <th scope="row">Juíz Nacional KUMITE (B)</th>
+                <th input scope="row"><input type="text" /></th>
+
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Juíz Nacional KUMITE (A)</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-light">
+                <th scope="row">Árbrito Nacional KUMITE (B)</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Árbrito Nacional KUMITE (A)</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr>
+                <th scope="row">Juíz Nacional KATA (B)</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr>
+                <th scope="row">Juíz Nacional KATA (A)</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr>
+                <th scope="row">Árbrito Europeu</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+            <tr>
+                <th scope="row">Árbrito Mundial</th>
+                <th input scope="row"><input type="text" /></th>
+
+            </tr>
+           
+        </tbody>
+    </table>
+</div>

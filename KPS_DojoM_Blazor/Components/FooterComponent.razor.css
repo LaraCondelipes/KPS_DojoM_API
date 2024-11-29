@@ -1,0 +1,53 @@
+﻿body {
+   
+}
+
+.footer {
+    background-color: rgba(190,33,50);
+    color: white;
+    height: 300px;
+    width: 100%;
+    position:relative;
+    --bs-gutter-x: 0 !important;
+    font-family: 'Arboria', 'Sans Serif Collection';
+}
+
+iframe {
+    width: 166px;
+    height: 166px;
+    border-radius: 50%;
+    margin-top: 20px;
+    
+}
+
+.imgLocal {
+    margin-top: 50px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.imgLogo {
+    margin-top: 50px;
+    text-align:center;
+}
+
+.contactsFooter {
+    margin-top: 50px;
+    letter-spacing: 3px;
+    text-align:center;
+    margin-right: 15px;
+}
+
+.imgClub {
+    margin-top: 20px;
+}
+
+.copyright {
+    margin-top: 75px;
+    font-style:italic;
+    font-size:13px;
+    text-align: center;
+  
+}

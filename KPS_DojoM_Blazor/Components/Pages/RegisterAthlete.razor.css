@@ -1,8 +1,24 @@
 ﻿body {
 }
 .zds-input-base__input {
-    border: none; /* Remove a borda */
-    outline: none; /* Remove o contorno ao clicar */
-    border-bottom: 1px solid #ccc; /* Adiciona uma linha inferior */
-    width: 50%; /* Faz com que o input ocupe toda a largura */
+    border: none; /* Remove the border */
+    outline: none; /* Remove the contourn when clicking */
+    border-bottom: 1px solid #ccc; /* Add a bottom line */
+    width: 50%; /* Makes the input take up the entire width */
+}
+
+.avatar-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
 }

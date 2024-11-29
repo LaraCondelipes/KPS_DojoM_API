@@ -14,7 +14,7 @@ namespace KPS_DojoM_models
         public string? AthleteName { get; set; }
 
         [DataType(DataType.Date)]  //forces only the date to be rendered
-        public DateTime? AthleteBirthdayDate { get; set; } 
+        public DateTime? AthleteBirthdayDay { get; set; } 
         public string? AthleteAddress { get; set; }
         public string? AthleteEmail { get; set; }
         public int? AthleteCellPhone { get; set; }
@@ -23,6 +23,17 @@ namespace KPS_DojoM_models
         public string? Club { get; set; }
         public int? AthleteClubMemberNumber { get; set; }
         public int? AssociationMemberNumber { get; set; }
+        public int? RegisterNumber { get; set; }
+        public int? AthleteHeight { get;set; }
+        public int? AthleteWeight { get;set; }
+        public int? AthleteZipCode { get; set; }
+        public string AthleteCity { get; set; }
+        public string? AthleteOccupacion { get; set; }
+        public string? AthleteCountry { get; set; }
+        public string? AthletePlaceOfBirth { get; set; }
+        public string? AthleteRegisterDate { get;set; } 
+        public string? AthleteSignature { get; set; }
+        public string? ParentAthleteSignature { get; set; }
 
         [ForeignKey("AssociationId")]
         public int? AssociationId { get; set; }

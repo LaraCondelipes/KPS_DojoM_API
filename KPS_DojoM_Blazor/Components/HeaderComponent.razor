@@ -19,13 +19,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/Senseis">Sensei's</a>
+                    <a class="nav-link active"  aria-current="page" href="/Senseis">Sensei's</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/Associacao">Associação</a>
+                    <a class="nav-link active"  aria-current="page" href="/Associacao">Associação</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/ClassesShedules">Turmas e Horários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Contacts">Contatos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/Traineeships">Estágios</a>
@@ -37,39 +40,15 @@
                     <a class="nav-link active" aria-current="page" href="/Events">Eventos</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/RegisterAthlete">Inscrever atleta</a>
+                    <a class="nav-link active"  aria-current="page" href="/RegisterAthlete">Inscrever atleta</a>
                 </li>
             </ul>
-
-
-
+           
         </div>
-   
+        @* login opens in a   pop-up *@
+        <button type="button" class="btn btn-outline-danger" @onclick="OnShowModalClick">Login</button>
        
-       @*  popup *@
-        <Modal @ref="modal" Title="Login">
-    <BodyTemplate>
-       <div class="form-input__wrapper">
-           <div class="zds-input-base form-input-text__input zds-input-base--full-width zds-input-base--has-error">
-               <label class="zds-input-base__label" for="email" id="zds">E-mail:</label>
-               <input class="zds-input-base__input" id="email" name="email" type="text" /><br />
-                <label class="zds-input-base__label" for="password" id="zds">Password:</label>
-               <input class="zds-input-base__input" id="password" name="password" type="text" />
-               
-               <div class="zds-input-base__border"></div>
-           </div>
-       </div>
-    </BodyTemplate>
-    <FooterTemplate>
-      <button type="button" class="btn btn-secondary" @onclick="OnHideModalClick">Close</button>
-      <button type="button" class="btn btn-outline-danger">Guardar</button>
-    </FooterTemplate>
-</Modal>
-
-<button type="button" class="btn btn-light"  @onclick="OnShowModalClick">Login</button>
-
     </div>
-
 </nav>
 
 @code {

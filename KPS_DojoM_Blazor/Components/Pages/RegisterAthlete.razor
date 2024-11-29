@@ -1,54 +1,89 @@
 ﻿@page "/RegisterAthlete"
+@rendermode InteractiveServer
 
-<h1>Welcome</h1>
 
 
 <form>
     <div class="row">
         <div class="form-group">
-            <InputFile OnChange="@LoadFile"></InputFile>
+            <div class="avatar-unpload">
+                @if (!string.IsNullOrEmpty(avatarUrl))
+                {
+                    <img src="@avatarUrl" alt="Avatar" class="avatar-image" />
+                }
+                
+                <InputFile OnChange="LoadFiles" accept="images/*"/>
+            </div>
+           
         </div>
-        <div class="form-group">
-            <label for="input AssociationMemberNumber">Associado Nº:</label>
-            <input type="text" class="form-control" id="associationMemberNumber"/>
-
-
+        <div class="form-group col-md-2">
+            <label for="input registerNumber">Ficha de Inscrição Nº:</label>
+            <input type="text" class="form-control" id="registerNumber"/>
         </div>
 
 
-        <div class="form-group">
+        <div class="form-group col-md-6">
 
             <label for="inputFullName">Name:</label>
             <input type="text" class="form-control" id="fullName" />
         </div>
-
-        <div class="form-group">
-            <label for="inputClub">Clube:</label>
-            <input type="text" class="form-control" id="club" />
-        </div>
-        <div class="form-group">
-            <label for="inputAffiliation">Filiação:</label>
-            <input type="text" class="form-control" id="affiliation"/>
-        </div>
+               
         <div class="form-row">
-            <div class="form-group">
-                <label for="inputBirthDte">Data de Nascimento:</label>
-                <input type="text" class="form-control" id="birthDate" />
+            <div class="form-group col-md-2">
+                <label for="inputBirthDay">Data de Nascimento:</label>
+                <input type="text" class="form-control" id="birthDay" />
+
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputHeight">Altura:</label>
+                <Input type="number" class="form-control" id="height" />
+                <Button Type="ButtonType.Submit" Class="btn btn-primary">Alterar</Button>
+                <label for="input">Peso:</label>
+                <Input type="number" class="form-control" id="weight" />
+                <Button Type="ButtonType.Submit" Class="btn btn-primary">Alterar</Button>
             </div>
         </div>
         <div class="form-group">
+            <div class="col-md-6">
+                <label for="inputAdress">Morada:</label>
+                <input type="text" class="form-control" id="adress" />
+            </div>
+            <div class=" col-md-2">
+                <label for="inputCity">Localidade:</label>
+                <input type="text" class="form-control col-md-2" id="location">
+                <label for="inputZip">Código Postal:</label>
+                <input type="text" class="form-control col-md-2" id="inputZip" />
+            </div>
+           
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2">
+                <label for="inputPhone">Contacto:</label>
+                <input type="text" class="form-control" id="vat" />
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail">E-mail:</label>
+                <input type="text" class="form-control col-md-6" id="email" />
+            </div>
+            <div class="col-md-2">
+                <label for="inputOccupation">Profissão:</label>
+                <input type="text" class="form-control" id="vat" />
+            </div>
+           
+
+        </div>
+        <div class="form-group col-md-2">
             <label for="inputNative">Naturalidade:</label>
             <input type="text" class="form-control" id="native"/>
-        </div>
-        <div class="form-group">
             <label for="inputNationality">Nacionalidade:</label>
-            <input type="text" class="form-control" id="nationality"/>
+            <input type="text" class="form-control" id="nationality" />
         </div>
-        <div class="form-group">
-            <label for="inputstate">Estado:</label>
-            <input type="text" class="form-control" id="state"/>
-        </div>
-        <div class="form-group">
+        
+           
+       
+       
+        <div class="form-group col-md-3">
             <label for="inputCcNumber">C.C. Nº:</label>
             <input type="text" class="form-control" id="ccNumber"/>
             <label for="inputExpiry">Validade:</label>
@@ -56,119 +91,27 @@
             <label for="inputVat">NIF Nº:</label>
             <input type="text" class="form-control" id="vat"  />
         </div>
-
-        <div class="form-group">
-            <label for="inputAdress">Morada:</label>
-            <input type="text" class="form-control" id="adress"  />
-            <label for="inputLocation">Localidade:</label>
-            <input type="text" class="form-control" id="location" >
-            <label for="inputZip">Código Postal:</label>
-            <input type="text" class="form-control" id="inputZip" />
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="inputPhone">Contacto:</label>
-            <input type="text" class="form-control" id="vat" />
-            <label for="inputEmail">E-mail:</label>
-            <input type="text" class="form-control" id="email" />
-            <label for="inputOccupation">Profissão:</label>
-            <input type="text" class="form-control" id="vat"  />
-
-        </div>
-        <div class="form-group">
-            <label for="input">Fed. Nº:</label>
-            <input type="text" class="form-control" id="fed"  />
-            <label for="input">LPKS Nº:</label>
-            <input type="text" class="form-control" id="vat"  />
-            <label for="input">Data de inscrição:</label>
-            <input type="text" class="form-control" id="registrationDate"  />
-        </div>
-        <div class="form-group">
+        <div class="form-group col-md-2">
             
+            <label for="input">Data da Inscrição:</label>
+            <input type="date" class="form-control" id="registerDate" />
+           
             <label for="input">Assinatura:</label>
             <input type="text" class="form-control" id="signature" />
             <label for="input"> Assinatura E.Educação: </label>
             <input type="text" class="form-control" id=" parentSignature" />
         </div>
         
-        <div class="form-group">
-            <table class="table table-success table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col">KYU</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">DAN</th>
-                        <th scope="col">Data</th>
-                    </tr>
-
-                </thead>
-                <tbody class="table-group-divider">
-                    <tr>
-                        <th scope="row">9º</th>
-                        <th input scope="row"></th>
-                        <th scope="row">C. Preto</th>
-                        <th input scope="row"></th>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">8º</th>
-                        <th input scope="row"></th>
-                        <th scope="row">1º</th>
-                        <th input scope="row"></th>
-                    </tr>
-                    <tr>
-                        <th scope="row">7º</th>
-                        <th input scope="row"></th>
-                        <th scope="row">2º</th>
-                        <th input scope="row"></th>
-                    </tr>
-                    <tr>
-                        <th scope="row">6º</th>
-                        <th input scope="row"></th>
-                        <th scope="row">3º</th>
-                        <th input scope="row"></th>
-                    </tr>
-                    <tr>
-                        <th scope="row">5º</th>
-                        <th input scope="row"></th>
-                        <th scope="row">4º</th>
-                        <th input scope="row"></th>
-                    </tr>
-                    <tr>
-                        <th scope="row">4º</th>
-                        <th input scope="row"></th>
-                        <th scope="row">5º</th>
-                        <th input scope="row"></th>
-                    </tr>
-                    <tr>
-                        <th scope="row">3º</th>
-                        <th input scope="row"></th>
-                        <th scope="row">6º</th>
-                        <th input scope="row"></th>
-                    </tr>
-                    <tr>
-                        <th scope="row">2º</th>
-                        <th input scope="row"></th>
-                        <th scope="row">7º</th>
-                        <th input scope="row"></th>
-                    </tr>
-                    <tr>
-                        <th scope="row">1º</th>
-                        <th input scope="row"></th>
-                        <th scope="row">8º</th>
-                        <th input scope="row"></th>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-       
+        
 
     </div>
-
+    <div class="form-group">
         <button type="submit" class="btn btn-primary">Guardar</button>
-
+    </div>
+        
+    <img src="\images\kps_symbol.jpg">
+    <p>KPS</p>
+    <p>Karate-Do Portugal Shotokan</p>
    
 
 
@@ -181,31 +124,42 @@
        
 
 
-            @code {
-                //Method for upload athlete photo
+@code {
+    private string avatarUrl = "/images/avatar-default.png"; //image path
 
-                //max size of the photo
-                private long maxFileSize = 1024 * 1024 * 6;
-                //max number of uploaded photos
-                private int maxAllowedFiles = 1;
-                private List<string> errors = new();
+    //Method for upload athlete photo
+    async Task LoadFiles(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
 
-                private async Task LoadFile(InputFileChangeEventArgs e)
-                {
-                errors.Clear();
+        //limit the maximum image size
+        if (file.Size > 5 * 1024*1024) // 5MB
+        {
+            Console.WriteLine("O ficheiro é demasiado grande.");
+            return;
+        }
 
-                if (e.FileCount > maxAllowedFiles)
-                {
-                errors.Add($"Error: Attempting to upload {e.FileCount} files, but only {maxAllowedFiles} file.");
-                return;
+        //Convert image to base64 for immediate display
+        var buffer = new byte[file.Size];
+        await file.OpenReadStream().ReadAsync(buffer);
 
-                foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
-                {
-                // ensures that the user does not enter the same document twice
-                string newFileName = Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(file.Name));
-                }
-                }
+        //Updates the avatar URL with the base64 of the uploaded image
+        avatarUrl = $"data:image/png;base64,{Convert.ToBase64String(buffer)}";
 
-                }
+        //debug url
+        Console.WriteLine($"Imagem carregada com sucesso! {avatarUrl}");
 
-            }
+        StateHasChanged();
+    }
+
+
+    // // ensures that the user does not enter the same document twice
+    // string newFileName = Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(file.Name));
+}
+                
+
+   
+
+               
+
+            
