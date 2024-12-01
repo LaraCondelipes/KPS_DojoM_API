@@ -1,0 +1,29 @@
+﻿body {
+
+}
+
+h1 {
+    font-family: 'Arboria', 'Sans Serif Collection';
+    text-align:center;
+    margin-bottom:70px;
+    margin-top:50px;
+}
+
+.image {
+    width:100%;
+    padding: 0;
+}
+
+p {
+    font-family: 'Bio Sans Italic', 'Sans Serif Collection';
+    text-align:justify;
+    margin-bottom:100px;
+}
+
+a {
+    text-align: center;
+    color: #b89d5f;
+    text-decoration:none;
+    margin-bottom:20px;
+}
+

@@ -24,31 +24,26 @@ body {
     transform:translate(-50% , -50%);
 }
 
-.nav-item {
+.nav-item ::deep a{
     min-width: auto;
-    white-space: nowrap;
-    color: white;
-   
-    border-bottom: 2px solid #BE2132;
+    white-space: nowrap ;
+    color: black ;
+    border-bottom: 2px solid #BE2132 ;
+    transition: all 0.2s ;
 }
 
-.nav-item:hover{
-    
-    border-bottom: 2px solid #000000;
-}
-
-    .nav-item a.active{/*????*/
-        color: #000000;
-        
+    .nav-item ::deep a:hover,
+    .nav-item ::deep a.active{
+        border-bottom: 2px solid #000000 !important;
     }
 
-    
-       
+
+
   
 
 .btn {
     font-family: 'Arboria', 'Sans Serif Collection';
-    margin: 0 30px;
+  margin: 0 5px;
     right: 0px;
     color: #BE2132;
 }
