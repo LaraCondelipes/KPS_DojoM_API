@@ -1,0 +1,64 @@
+﻿body {
+    background-color: #FDFDFD;
+}
+
+.page-background {
+    background-image: url(../images/K.jpeg);
+    background-repeat: no-repeat;
+    background-position:center;
+   
+}
+
+.card {
+    font-family: 'Arboria', 'Sans Serif Collection';
+    font-size: 14px;
+    width: 850px;
+    /* width: auto !important;*/
+    margin: 90px auto;
+    float: none;
+    opacity: 85%
+}
+.card1 {
+    margin-right:42%;
+    
+}
+
+.card2 {
+    margin-left:43%;
+
+}
+
+.textF {
+    font-family: 'Bio Sans', 'Sans Serif Collection';
+    font-size: 12px;
+    color: #BE2132;
+    opacity: 100% !important;
+}
+
+.textM {
+    font-family: 'Bio Sans', 'Sans Serif Collection';
+    font-size: 12px;
+    color: #BE2132;
+    opacity: 100% !important;
+    margin-left:25px;
+}
+
+.imgFernandes {
+    width: 120px;
+    height: 207px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-right: 25px;
+}
+
+.imgMendes {
+    width: 120px;
+    height: 207px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-left:25px;
+}
+
+body .mb-3 {
+    margin-bottom: 90px !important;
+}

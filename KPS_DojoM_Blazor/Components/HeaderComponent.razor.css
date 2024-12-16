@@ -15,7 +15,7 @@ body {
 }
 
 .collapse {
-    font-family: 'Arboria', 'Sans Serif Collection';
+    font-family: 'Bio Sans Italic', 'Sans Serif Collection';
     margin: 0 5px;
     float:none;
     position:absolute;
@@ -51,4 +51,10 @@ body {
 /*remove space*/
 .bg-body-tertiary {
     --bs-bg-opacity:0 !important;
+}
+
+.simbol {
+    width:97px;
+    height: 122px;
+    margin-top:10px;
 }

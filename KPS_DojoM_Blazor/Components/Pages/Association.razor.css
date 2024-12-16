@@ -1,5 +1,6 @@
 ﻿body {
-
+   border-bottom:dotted;
+   color:#b89d5f;
 }
 
 h1 {
@@ -16,14 +17,22 @@ h1 {
 
 p {
     font-family: 'Bio Sans Italic', 'Sans Serif Collection';
-    text-align:justify;
-    margin-bottom:100px;
+    text-align: justify;
+    
+    margin: 2% 5% 2% 5%;
 }
 
 a {
     text-align: center;
     color: #b89d5f;
     text-decoration:none;
-    margin-bottom:20px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.myCard {
+display:flex;
+flex-direction:row;
+margin: 5% 10% 5% 10% ;
 }
 

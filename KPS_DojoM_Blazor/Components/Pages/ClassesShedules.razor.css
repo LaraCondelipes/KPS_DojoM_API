@@ -1,0 +1,9 @@
+﻿body {
+}
+
+.card {
+display:flex;
+flex-direction:column;
+margin: 30% 20% 30% 20%;
+text-align:center;0
+}

@@ -1,0 +1,42 @@
+﻿body {
+  
+}
+
+.card {
+    font-family: 'Bio Sans Italic', 'Sans Serif Collection';
+    display: flex;
+    flex-direction:column;
+    margin: 8% 0 3% 19%;
+    opacity: 90%;
+    width: 25rem;
+    border-color: #BE2132;
+}
+.page-background {
+    background-image: url(../images/map2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80% !important;
+    width:30%;
+    height:30%;
+    text-align: center;
+    border: solid 1px;
+    margin: auto;
+}
+
+.pavImage {
+    width: 300px;
+    height: 150px;
+    display:flex;
+    flex-direction: column;
+ 
+    margin: 20% 3% 15% 19%;
+}
+
+.adress {
+ margin:15% 0 3% 19%;
+}
+
+.contacts {
+    margin: 3% 0 15% 19%;
+}
+
