@@ -1,24 +1,103 @@
 ﻿body {
+  
 }
+
+
+
 .zds-input-base__input {
-    border: none; /* Remove the border */
-    outline: none; /* Remove the contourn when clicking */
-    border-bottom: 1px solid #ccc; /* Add a bottom line */
-    width: 50%; /* Makes the input take up the entire width */
+    border: none;
+    Remove the border outline: none;
+    Remove the contourn when clicking border-bottom: 1px solid #ccc;
+    Add a bottom line width: 50%;
+    Makes the input take up the entire width
 }
 
 .avatar-upload {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15px;
+    margin: 30% 5% 10% 5%;
 }
 
 .avatar-image {
     width: 150px;
-    height: 150px;
+    
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 10px;
-    border: 2px solid #ccc;
+    margin: 5% 3% 10% 0%;
+   /* border: 2px solid #ccc;*/
+}
+
+.home {
+    margin-left: 90%;
+    width: 38px;
+    height: 32px;
+}
+
+.form-group {
+    margin: 2% 8% 5% 8%;
+    
+}
+
+.textRegister {
+padding: 5% 0% 2% 0% !important;
+
+
+}
+
+.symbolImage {
+   margin:0% 0% 1% 50%; 
+   text-align:center;
+}
+
+.symbolText {
+    margin: 0% 40% 5% 46%;
+    font-size:small;
+    text-align:center;
+
+}
+
+
+.form-control {
+    padding: 0% !important;
+
+}
+
+.row {
+    --bs-gutter-x: 0rem !important;
+}
+
+
+label {
+/*margin-bottom: 3%;*/
+height: 20px;
+}
+
+/*input*/
+#registerNumber {
+    margin-top: 28%;
+}
+
+
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnSave {
+    margin-left: 80%;
+}
+
+#btnChange {
+    margin-left: 3%;
+}
+
+.label{
+    margin-right: 3%;
+}
+
+#dateOfBirth {
+    margin-left: 10%;
 }

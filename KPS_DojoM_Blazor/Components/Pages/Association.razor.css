@@ -36,3 +36,8 @@ flex-direction:row;
 margin: 5% 10% 5% 10% ;
 }
 
+.home {
+    margin-left: 90%;
+    width: 38px;
+    height: 32px;
+}
