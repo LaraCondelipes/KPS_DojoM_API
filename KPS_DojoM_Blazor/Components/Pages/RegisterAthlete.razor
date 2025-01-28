@@ -5,7 +5,7 @@
 
 <a class="navbar-brand" href="#">
 
-    <img class="home" src="../images/home-01_generated_black-Transp.jpg" alt="KPS Montijo" />
+    <img class="homeImage" src="../images/home-01_generated_black-Transp.jpg" alt="KPS Montijo" />
 </a>
 <form>
 
@@ -36,107 +36,121 @@
 
             <div class="form-group col-md-4">
 
-                <label class="label" id="fullName" for="inputFullName">Nome:</label>
-                <input type="text" class="form-control" id="fullName" />
+                <label class="label name" for="inputFullName">Nome:</label>
+                <input type="text" class="form-control" />
             </div>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-2">
-                <label class="label" id="dateOfBirth"  for="inputBirthDay">Dta.Nascimento:</label>
-                <input type="date" class="form-control" id="birthDay" />
 
-            </div>
-            <div class="form-group col-md-2">
-                <label class="label" for="inputHeight">Altura:</label>
-                <Input type="number" class="form-control" id="height" />
-                <button type="submit" Class="btn btn-outline-danger" id="btnChange">Alterar</button>
-            </div>
-            <div class="form-group col-md-2">
-                <label class="label" for="input">Peso:</label>
-                <Input type="number" class="form-control" id="weight" />
-                <button type="submit" Class="btn btn-outline-danger" id="btnChange">Alterar</button>
-            </div>
-        </div>
-        <div class="form-row">
             <div class="form-group">
-                <div class="col-md-4">
-                    <label class="label" for="inputAdress">Morada:</label>
-                    <input type="text" class="form-control" id="adress" />
+                <div class="col-md-2">
+                    <label class="birthDay" for="inputBirthDay">Dta.Nascimento:</label>
+                    <input type="date" class="form-control inputBirthDay" id="birthDay" />
+                </div>
+                <div class="col-md-2">
+                    <label class="" for="inputHeight">Altura:</label>
+                    <Input type="number" class="form-control" id="height" />
+                    <button type="submit" Class="btn btn-outline-danger" id="btnChange">Alterar</button>
                 </div>
                 <div class=" col-md-2">
-                    <label class="label"  for="inputCity">Localidade:</label>
-                    <input type="text" class="form-control col-md-2" id="location">
+                    <label class="" for="input">Peso:</label>
+                    <Input type="number" class="form-control" id="weight" />
+                    <button type="submit" Class="btn btn-outline-danger" id="btnChange">Alterar</button>
                 </div>
-                <div class=" col-md-2">
-                    <label class="label" for="inputZip">Código Postal:</label>
-                    <input type="text" class="form-control col-md-2" id="inputZip" />
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="" for="inputAdress">Morada:</label>
+                        <input type="text" class="form-control" id="adress" />
+                    </div>
+                    <div class=" col-md-2">
+                        <label class="" for="inputCity">Localidade:</label>
+                        <input type="text" class="form-control col-md-2" id="location">
+                    </div>
+                    <div class=" col-md-2">
+                        <label class="" for="inputZip">Código Postal:</label>
+                        <input type="text" class="form-control col-md-2" id="inputZip" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-1">
+                    <label class="" for="inputPhone">Contacto:</label>
+                    <input type="text" class="form-control" id="vat" />
+                </div>
+                <div class="col-md-3">
+                    <label class="" for="inputEmail">E-mail:</label>
+                    <input type="text" class="form-control col-md-6" id="email" />
+                </div>
+                <div class="col-md-2">
+                    <label class="" for="inputOccupation">Profissão:</label>
+                    <input type="text" class="form-control" id="vat" />
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-1">
+                    <label class="" for="inputNative">Naturalidade:</label>
+                    <input type="text" class="form-control" id="native" />
+
+                </div>
+                <div class="col-md-1">
+                    <label class="" for="inputNationality">Nacionalidade:</label>
+                    <input type="text" class="form-control" id="nationality" />
+                </div>
+                <div class="col-md-1">
+                    <label class="" for="inputCcNumber">C.C. Nº:</label>
+                    <input type="text" class="form-control" id="ccNumber" />
+                </div>
+                <div class="col-md-1">
+
+                    <label class="" for="inputExpiry">Validade:</label>
+                    <input type="text" class="form-control" id="expiry">
+
+                </div>
+                <div class="col-md-1">
+                    <label class="" for="inputVat">NIF Nº:</label>
+                    <input type="text" class="form-control" id="vat" />
                 </div>
 
             </div>
+
+            <div class="form-group">
+
+                <label class="" for="input">Data da Inscrição:</label>
+                <input type="date" class="form-control" id="registerDate" />
+
+                <label class="" for="input">Assinatura:</label>
+                <input type="text" class="form-control" id="signature" />
+                <label for="input"> Assinatura E.Educação: </label>
+                <input type="text" class="form-control" id=" parentSignature" />
+            </div>
+
+
+
         </div>
+
 
         <div class="form-group">
-            <div class="col-md-1">
-                <label class="label" for="inputPhone">Contacto:</label>
-                <input type="text" class="form-control" id="vat" />
-            </div>
-            <div class="col-md-3">
-                <label class="label" for="inputEmail">E-mail:</label>
-                <input type="text" class="form-control col-md-6" id="email" />
-            </div>
-            <div class="col-md-2">
-                <label class="label" for="inputOccupation">Profissão:</label>
-                <input type="text" class="form-control" id="vat" />
-            </div>
-
-
-        </div>
-        <div class="form-group col-md-1">
-            <label class="label" for="inputNative">Naturalidade:</label>
-            <input type="text" class="form-control" id="native" />
-            <label class="label"  for="inputNationality">Nacionalidade:</label>
-            <input type="text" class="form-control" id="nationality" />
+            @if (submitted)
+            {
+                <p>Atleta inscrito<img href="../images/armStrong.png" /></p>
+            }
+            <button type="submit" class="btn btn-outline-secondary" id="btnSave">Guardar</button>
         </div>
 
 
 
 
-        <div class="form-group col-md-1">
-            <label class="label" for="inputCcNumber">C.C. Nº:</label>
-            <input type="text" class="form-control" id="ccNumber" />
-            <label class="label" for="inputExpiry">Validade:</label>
-            <input type="text" class="form-control" id="expiry">
-            <label class="label" for="inputVat">NIF Nº:</label>
-            <input type="text" class="form-control" id="vat" />
-        </div>
-        <div class="form-group col-md-1">
+        <img class="symbolImage" src="\images\kps_symbol.jpg" />
 
-            <label class="label" for="input">Data da Inscrição:</label>
-            <input type="date" class="form-control" id="registerDate" />
-
-            <label class="label" for="input">Assinatura:</label>
-            <input type="text" class="form-control" id="signature" />
-            <label  for="input"> Assinatura E.Educação: </label>
-            <input type="text" class="form-control" id=" parentSignature" />
-        </div>
-
-
+        <p class="symbolText">Karate-Do Portugal Shotokan</p>
 
     </div>
-
-
-    <div class="form-group">
-        <button type="submit" class="btn btn-outline-secondary" id="btnSave">Guardar</button>
-    </div>
-
-
-
-
-    <img class="symbolImage" src="\images\kps_symbol.jpg" />
-
-    <p class="symbolText">Karate-Do Portugal Shotokan</p>
-
-
 </form>
 
 
@@ -147,6 +161,9 @@
 
 
 @code {
+    private bool submitted = false;
+
+
     private string avatarUrl = "/images/avatar-default.png"; //image path
 
     //Method for upload athlete photo
@@ -177,6 +194,11 @@
 
     // // ensures that the user does not enter the same document twice
     // string newFileName = Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(file.Name));
+
+
+
+
+
 }
 
 

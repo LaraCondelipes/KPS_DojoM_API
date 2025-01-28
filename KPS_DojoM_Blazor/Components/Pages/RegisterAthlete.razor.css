@@ -24,43 +24,67 @@
     
     border-radius: 50%;
     object-fit: cover;
-    margin: 5% 3% 10% 0%;
-   /* border: 2px solid #ccc;*/
+    margin: 5% 3% 10% 8%;
+   
 }
 
-.home {
-    margin-left: 90%;
+.homeImage {
+    margin-left: 91%;
     width: 38px;
     height: 32px;
 }
 
 .form-group {
     margin: 2% 8% 5% 8%;
-    
+    display: flex;
+    align-items: center;
+    /* justify-content: center;*/
+    flex-direction: row;
+    gap: 3%;
 }
 
 .textRegister {
-padding: 5% 0% 2% 0% !important;
-
+/*padding: 5% 0% 2% 0% !important;*/
+margin-right: 3%;
 
 }
 
+/*input*/
+#registerNumber {
+    margin-top: 9%;
+    
+}
+
+.name {
+    margin-right: 2%;
+}
+
+input {
+   
+}
+
+.inputBirthDay {
+    margin-bottom: 17%;
+}
+
 .symbolImage {
-   margin:0% 0% 1% 50%; 
-   text-align:center;
+    margin: 0% 0% 1% 50%;
+    text-align: center;
+    height: 80px;
+    width: 80px;
 }
 
 .symbolText {
     margin: 0% 40% 5% 46%;
     font-size:small;
-    text-align:center;
+    
 
 }
 
 
 .form-control {
     padding: 0% !important;
-
+   
 }
 
 .row {
@@ -68,36 +92,14 @@ padding: 5% 0% 2% 0% !important;
 }
 
 
-label {
-/*margin-bottom: 3%;*/
-height: 20px;
-}
-
-/*input*/
-#registerNumber {
-    margin-top: 28%;
-}
-
-
-
-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #btnSave {
     margin-left: 80%;
 }
 
 #btnChange {
-    margin-left: 3%;
+  margin-top:3%;
 }
 
-.label{
-    margin-right: 3%;
-}
 
-#dateOfBirth {
-    margin-left: 10%;
-}
+
+
