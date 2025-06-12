@@ -1,6 +1,6 @@
 ﻿@page "/RegisterAthlete"
 @rendermode InteractiveServer
-
+@inject IJSRuntime JS
 
 
 <a class="navbar-brand" href="#">
@@ -19,7 +19,7 @@
                     <img src="@avatarUrl" alt="Avatar" class="avatar-image" />
                 }
 
-                <InputFile OnChange="LoadFiles" accept="images/*" />
+                <InputFile OnChange="LoadFiles"  accept="images/*" />
 
             </div>
         </div>
@@ -50,12 +50,12 @@
                 <div class="col-md-2">
                     <label class="" for="inputHeight">Altura:</label>
                     <Input type="number" class="form-control" id="height" />
-                    <button type="submit" Class="btn btn-outline-danger" id="btnChange">Alterar</button>
+                    <button type="submit" Class="btn btn-outline-danger no-print" id="btnChange">Alterar</button>
                 </div>
                 <div class=" col-md-2">
                     <label class="" for="input">Peso:</label>
                     <Input type="number" class="form-control" id="weight" />
-                    <button type="submit" Class="btn btn-outline-danger" id="btnChange">Alterar</button>
+                    <button type="button" Class="btn btn-outline-danger no-print" id="btnChange">Alterar</button>
                 </div>
             </div>
             <div class="form-row">
@@ -79,7 +79,7 @@
             <div class="form-group">
                 <div class="col-md-1">
                     <label class="" for="inputPhone">Contacto:</label>
-                    <input type="text" class="form-control" id="vat" />
+                    <input type="text" class="form-control" " />
                 </div>
                 <div class="col-md-3">
                     <label class="" for="inputEmail">E-mail:</label>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-md-2">
                     <label class="" for="inputOccupation">Profissão:</label>
-                    <input type="text" class="form-control" id="vat" />
+                    <input type="text" class="form-control" " />
                 </div>
 
 
@@ -140,7 +140,13 @@
             {
                 <p>Atleta inscrito<img href="../images/armStrong.png" /></p>
             }
-            <button type="submit" class="btn btn-outline-secondary" id="btnSave">Guardar</button>
+            <button type="submit" class="btn btn-outline-secondary no-print no-focus-style">Guardar</button>
+            <button type="button" class="btn btn-outline-danger no-print no-focus-style" @onclick="PrintPage">Print</button>
+        </div>
+
+        <div>
+          
+
         </div>
 
 
@@ -162,9 +168,9 @@
 
 @code {
     private bool submitted = false;
-
-
     private string avatarUrl = "/images/avatar-default.png"; //image path
+    private IJSObjectReference? _printModule;
+
 
     //Method for upload athlete photo
     async Task LoadFiles(InputFileChangeEventArgs e)
@@ -190,6 +196,19 @@
 
         StateHasChanged();
     }
+
+    //Method to print the page
+  
+        private async Task PrintPage()
+        {
+            await JS.InvokeVoidAsync("print");
+        }
+    
+
+
+   
+    
+
 
 
     // // ensures that the user does not enter the same document twice

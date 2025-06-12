@@ -28,13 +28,28 @@
 
 }
 
+/*.adress {
+    margin-top:50px;
+}*/
+
+/*.contacts {
+    margin-bottom: 10px;
+}*/
+
+.adresscontacts {
+    margin: 5% 0% 0% 23%;
+
+   
+}
+
 .pavImage {
     width: 300px;
     height: 150px;
-
     flex-direction: column;
- 
- 
+}
+.map_pav {
+    margin-top:10%;
+    
 }
 
 .home {

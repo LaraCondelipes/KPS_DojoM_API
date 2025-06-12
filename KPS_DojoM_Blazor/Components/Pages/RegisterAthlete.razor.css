@@ -59,9 +59,6 @@ margin-right: 3%;
     margin-right: 2%;
 }
 
-input {
-   
-}
 
 .inputBirthDay {
     margin-bottom: 17%;
@@ -91,14 +88,30 @@ input {
     --bs-gutter-x: 0rem !important;
 }
 
-
-#btnSave {
-    margin-left: 80%;
+/*elements that should not appear in the file to be printed*/
+@media print {
+    .no-print {
+        display: none;
+    }
 }
+
 
 #btnChange {
   margin-top:3%;
 }
+
+/*.danger {
+box-shadow: none !important;
+outline: none !important;
+}*/
+
+.no-focus-style:focus,
+.no-focus-style:focus-visible,
+.no-focus-style:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 
 
 
